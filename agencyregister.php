@@ -8,7 +8,7 @@
         $email_address = mysqli_escape_string($db,$_POST['email']);
         $password = mysqli_escape_string($db,$_POST['password']);
    
-        $query = "SELECT * FROM users WHERE email = '$email_address' AND pass= '$password'";
+        $query = "SELECT * FROM users WHERE email = '$email_address'";
         $result = mysqli_query($db,$query);
    
         if(mysqli_num_rows($result)==0){
@@ -36,7 +36,7 @@
         <div class="container">
             <h1 class="display-3 text-muted">Agency Register</h1>
             <hr>
-            <form action="register.php" method="post">
+            <form action="agencyregister.php" method="post">
                 <div class="form-group">
                     <label class="form-label text-muted" for="email">Email: </label>
                     <input class="form-control" type="email" name="email" id="email"/>

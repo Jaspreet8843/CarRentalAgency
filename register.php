@@ -8,7 +8,7 @@
         $email_address = mysqli_escape_string($db,$_POST['email']);
         $password = mysqli_escape_string($db,$_POST['password']);
    
-        $query = "SELECT * FROM users WHERE email = '$email_address' AND pass= '$password'";
+        $query = "SELECT * FROM users WHERE email = '$email_address'";
         $result = mysqli_query($db,$query);
    
         if(mysqli_num_rows($result)==0){

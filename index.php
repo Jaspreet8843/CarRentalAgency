@@ -15,10 +15,10 @@ if(isset($_POST['submit'])){
     {
         $carid = $_POST['car_id'];
         $userid = $_SESSION['user_id'];
-        $startdate = $_POST['startdate'];
+        $startdate = "'".$_POST['startdate']."'";
         $days = $_POST['days'];
-        $startdate = date("Y-m-d",strtotime($startdate));
-        print($startdate);
+        //$startdate = date("Y-m-d",strtotime($startdate));
+        //print($startdate);
         $query = "SELECT * FROM bookings WHERE custid=$userid AND carid=$carid AND status='PROCESSING'";
 
         if(mysqli_num_rows(mysqli_query($db, $query))==0){
