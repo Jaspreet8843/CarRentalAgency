@@ -3,6 +3,10 @@ require('header.php');
 $query = "SELECT * FROM cars";
 $result = mysqli_query($db, $query);
 if(isset($_POST['submit'])){
+    if(!isset($_SESSION['email']))
+    {
+        header('location: login.php');
+    }
     if($_POST['startdate'] == "" || $_POST['days'] == "")
     {
         echo "<script type='text/javascript'>alert('Failed to Book! Please fill in the form.')</script>";

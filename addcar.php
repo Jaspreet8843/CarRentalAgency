@@ -1,5 +1,8 @@
 <?php
 require('header.php');
+if(!isset($_SESSION['type'])){
+    header("Location: login.php");
+}
 if(isset($_POST['submit']))
 {
 

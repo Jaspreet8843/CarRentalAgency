@@ -51,6 +51,7 @@
                     <div class="form-group col-auto text-muted">
                         Not registered?
                         <a href="register.php" class="btn btn-warning" name="submit">REGISTER!</a>
+                        <a href="agencyregister.php" class="btn btn-danger" name="submit">AGENCY REGISTER?</a>
                     </div>
                 </div>
             </form>

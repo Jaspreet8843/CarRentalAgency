@@ -12,12 +12,12 @@
         $result = mysqli_query($db,$query);
    
         if(mysqli_num_rows($result)==0){
-            $query = "INSERT INTO users(email,pass,type) VALUES('$email_address','$password','customer')";
+            $query = "INSERT INTO users(email,pass,type) VALUES('$email_address','$password','agency')";
             $result = mysqli_query($db,$query);
             print(mysqli_error($db));
             $_SESSION['email'] = $email_address;  
             $_SESSION['user_id'] = $email_address;
-            $_SESSION['type'] = 'customer';
+            $_SESSION['type'] = 'agency';
             $_SESSION['success'] = "You are now logged in";
             header('location: index.php');
         }
@@ -29,12 +29,12 @@
 
 <html>
     <head>
-        <title>Register</title>
+        <title>Agency Register</title>
     </head>
     <body class="bg-light">
         <span class="border">
         <div class="container">
-            <h1 class="display-3 text-muted">Register</h1>
+            <h1 class="display-3 text-muted">Agency Register</h1>
             <hr>
             <form action="register.php" method="post">
                 <div class="form-group">

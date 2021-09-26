@@ -14,11 +14,13 @@ session_start();
                 <li class="nav-item active">
                     <a class="nav-link" href="index.php">Home </a>
                 </li>
+                <?php if(isset($_SESSION['type']) && $_SESSION['type']=='agency'){?>
                 <li class="nav-item">
                     <a class="nav-link" href="addcar.php">Add Cars</a>
                 </li>
+                <?php }?>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">View Bookings</a>
+                    <a class="nav-link" href="bookings.php">View Bookings</a>
                 </li>
             </ul>
         
